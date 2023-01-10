@@ -1,0 +1,15 @@
+/Users/psyko/Projects/XantiumCoursCSharp/XantiumCoursCSharp/obj/Debug/net7.0/XantiumCoursCSharp.csproj.AssemblyReference.cache
+/Users/psyko/Projects/XantiumCoursCSharp/XantiumCoursCSharp/obj/Debug/net7.0/XantiumCoursCSharp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/psyko/Projects/XantiumCoursCSharp/XantiumCoursCSharp/obj/Debug/net7.0/XantiumCoursCSharp.AssemblyInfoInputs.cache
+/Users/psyko/Projects/XantiumCoursCSharp/XantiumCoursCSharp/obj/Debug/net7.0/XantiumCoursCSharp.AssemblyInfo.cs
+/Users/psyko/Projects/XantiumCoursCSharp/XantiumCoursCSharp/obj/Debug/net7.0/XantiumCoursCSharp.csproj.CoreCompileInputs.cache
+/Users/psyko/Projects/XantiumCoursCSharp/XantiumCoursCSharp/bin/Debug/net7.0/XantiumCoursCSharp
+/Users/psyko/Projects/XantiumCoursCSharp/XantiumCoursCSharp/bin/Debug/net7.0/XantiumCoursCSharp.deps.json
+/Users/psyko/Projects/XantiumCoursCSharp/XantiumCoursCSharp/bin/Debug/net7.0/XantiumCoursCSharp.runtimeconfig.json
+/Users/psyko/Projects/XantiumCoursCSharp/XantiumCoursCSharp/bin/Debug/net7.0/XantiumCoursCSharp.dll
+/Users/psyko/Projects/XantiumCoursCSharp/XantiumCoursCSharp/bin/Debug/net7.0/XantiumCoursCSharp.pdb
+/Users/psyko/Projects/XantiumCoursCSharp/XantiumCoursCSharp/obj/Debug/net7.0/XantiumCoursCSharp.dll
+/Users/psyko/Projects/XantiumCoursCSharp/XantiumCoursCSharp/obj/Debug/net7.0/refint/XantiumCoursCSharp.dll
+/Users/psyko/Projects/XantiumCoursCSharp/XantiumCoursCSharp/obj/Debug/net7.0/XantiumCoursCSharp.pdb
+/Users/psyko/Projects/XantiumCoursCSharp/XantiumCoursCSharp/obj/Debug/net7.0/XantiumCoursCSharp.genruntimeconfig.cache
+/Users/psyko/Projects/XantiumCoursCSharp/XantiumCoursCSharp/obj/Debug/net7.0/ref/XantiumCoursCSharp.dll
