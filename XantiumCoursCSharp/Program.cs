@@ -1,4 +1,6 @@
-﻿namespace XantiumCoursCSharp;
+﻿using System.Linq;
+
+namespace XantiumCoursCSharp;
 class Program
 {
     #region les enums
@@ -46,21 +48,35 @@ class Program
         Console.WriteLine("init struct\n");
 
         List<string> tsts = new(); // init list type unique ( plus tu as d'element plus elle devient lent)
+        tsts.Add("Meow");    // add data T
+        tsts.Remove("Meow"); // remove la data sous se nom 
 
-        Dictionary<string, string> dico = new(); // init dico 2 type ( linéaire, peux importe le nombre d'item ça reste très rapide )
+        Dictionary<string, string> dico = new(); // init dico 2 type de data soit KVP ( key value pair ) ( linéaire, peux importe le nombre d'item ça reste très rapide )
+        dico.Add("Meow", "Meow1");// add data T
+        dico.Remove(key: "Meow"); // remove la data sous se nom
 
         Queue<string> queue = new(); // init queue type unioque ajoute toujours la nouvelle data a la fin et unqueue la plus " vieille "
+        queue.Enqueue("Meow"); // add data T a la fin de la queue
+        queue.Dequeue();       // retire l'item 0 de la queue
+        if (queue.TryDequeue(out string dataqueue)) { } // essaye de retirer l'item de la queue 
 
         PriorityQueue<string, int> priority = new(); // init de la queue a priorité, plus elle sera haute plus litem sera pris rapidement avec le unqueue
+        priority.Enqueue("Meow", 0);                                // add data T en fonction de la priority qu'on lui defini via le int 
+        priority.Dequeue();                                         // retire l'item 0 de la queue
+        if (priority.TryDequeue(out string str, out int prio)) { }  // essaye de retirer l'item de la queue 
 
         ConcurrentQueue<string> cqueue = new(); // init de la ConcurrentQueue ( en cas de multi thread 1 thread peux prendre le owner sur elle et la lock le temps de faire se qu'il à besoin et release sont état après )
+        cqueue.Enqueue("Meow");                             // add data T a la fin de la queue
+        if (cqueue.TryDequeue(out string datacqueue)) { }   // essaye de retirer l'item de la queue 
 
         HashSet<string> hash = new(); // init du hashSet qui est comme une list en bien plus rapide surtout pour de check dans beaucoup d'item grace au hash.containt(""); qui n'est pas dispo dans une list
+        hash.Add("Meow");       // add data T a la fin de la queue
+        hash.Remove("Meow");    // retire l'item 0 de la queue
 
         Stack<int> stack = new(); // init de la stack c'est comme en asm chaque item push dedans devras être retirer pour aller chercher celui que t'as besoin exemple en dessous
 
-        stack.Push(0);
-        stack.Push(1);
+        stack.Push(0); // add en 0 du stack
+        stack.Push(1); // add en 1 du stack
         //si je veux retouver mon 0 je dois retirer 1 avant retirer 0 et le stocker dans une var pour remettre le 1 dans la stack
         var un = stack.Pop(); // retourne le nombre 1
         var zero = stack.Pop(); // retourne le nombre 0
@@ -313,6 +329,7 @@ class Program
         Console.WriteLine("Meow, World!");
     }
 }
+
 
 
 
