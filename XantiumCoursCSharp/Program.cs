@@ -255,8 +255,64 @@ class Program
         Console.WriteLine("\n");
         #endregion
 
+        #region unsafe
+        int exemple2 = 1024;
+        unsafe
+        {
+            // valid ou pas 
+            int* p1, p2, p3;   // Ok
+            // int* p1, *p2, *p3;   // Invalid in C#
+
+
+            // exemple 1
+            int[] a = new int[5] { 0, 20, 30, 40, 50 }; // on init un tableau de int 
+            fixed (int* p = &a[0]) // on fix le pointeur p sur la ref du tableau a.First();
+            {
+                while (*p < a.Count()) // on deref p pour connaitre sa value qu'on compare a a.count();
+                {
+                    Console.WriteLine(a[*p]); // on print a deref de p 
+                    *p += 1; // on deref p pour lui ajouter +1
+                }
+            }
+
+
+            // exemple 2
+            byte* exp2 = (byte*)&exemple2; // on implicite cast pour convertir de int en byte
+
+            for (int b = 0; b < sizeof(int); ++b)
+            {
+                Console.Write(" {0:X2}", *exp2); // on print en hexa la value de exp2 converti en byte juste avant 
+                // on ++ le byte* exp2 
+                exp2++;
+            }
+
+            // exemple 3
+            int val1 = 10;
+            int val2 = 20;
+            Meow(&val1, &val2);
+
+
+            // Exemple 4
+            Ptr ptr = new Ptr();
+            Console.WriteLine("Avant le swap Swap: val1:{0}, val2: {1}", val1, val2);
+            ptr.swap(&val1, &val2);
+            Console.WriteLine("Après le swap Swap: val1:{0}, val2: {1}", val1, val2);
+        }
+
+        // un fonction unsafe qui n'est pas obligé d'être dans la balise unsafe pour être mise en place
+        static unsafe void Meow(int* value, int* value2)
+        {
+            Console.WriteLine("Data is: {0} ", *value); // on deref value pour le print
+            Console.WriteLine("Address is: {0X2}", (int)value);
+            Console.WriteLine("Data is: {0} ", value->ToString()); // on met la value en string 
+        }
+
+
+        #endregion
+
         Console.WriteLine("Meow, World!");
     }
 }
+
 
 
