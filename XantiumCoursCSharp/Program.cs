@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace XantiumCoursCSharp;
+﻿namespace XantiumCoursCSharp;
 class Program
 {
     #region les enums
@@ -34,7 +32,7 @@ class Program
 
         Console.WriteLine(@"c:\test\rTest\nTest"); // le @ c'est pour les paths ( sans le @ le \t \r \n prend effet )
 
-        int i = 0;    
+        int i = 0;
         Console.WriteLine($"Print : {i.ToString()}"); // ici grace au $ on n'as pas besoin de faire un ToString() car ça le fait auto
 
         Console.WriteLine(); // \r print sur la même ligne et bouge le cursor a 0 après un print
@@ -120,7 +118,7 @@ class Program
             // mon code / fonction ici 
         });
 
-        var thread =new Thread(() => { // ne start pas s'il ne rencontre pas le "  thread.Start(); " plus bas  ( mais le code continue et ne l'attend pas )
+        var thread = new Thread(() => { // ne start pas s'il ne rencontre pas le "  thread.Start(); " plus bas  ( mais le code continue et ne l'attend pas )
             // mon code / fonction ici 
         });
         thread.Start();
@@ -139,6 +137,7 @@ class Program
             }
         }
 
+        Console.WriteLine("press any key to continue");
         Console.Read(); // obligé le stoppé le thread main sinon il fini sont execution et donc kill les autres thread qu'ils ai finit ou pas vu qu'il ne sont pas attendu 
 
         //sans lock: 8, 4, 9, 6, 1, 10, 7, 3, 2, 5
@@ -155,6 +154,7 @@ class Program
             Console.Write((int)number + ", ");
         }
 
+        Console.WriteLine("press any key to continue");
         Console.Read(); // obligé le stoppé le thread main sinon il fini sont execution et donc kill les autres thread qu'ils ai finit ou pas vu qu'il ne sont pas attendu 
 
         Console.WriteLine("\n");
@@ -251,7 +251,7 @@ class Program
         defautPlayer.attack("Defaut attack"); // peux attack 
 
 
-        Humain humain = new(pv: 10, mp: 500, sprintTime: 20); 
+        Humain humain = new(pv: 10, mp: 500, sprintTime: 20);
         humain.attack("Humain Attack");// peux attack 
 
         humain.Sprint(); // mais peux sprinter aussi
@@ -319,10 +319,22 @@ class Program
         static unsafe void Meow(int* value, int* value2)
         {
             Console.WriteLine("Data is: {0} ", *value); // on deref value pour le print
-            Console.WriteLine("Address is: {0X2}", (int)value);
             Console.WriteLine("Data is: {0} ", value->ToString()); // on met la value en string 
         }
 
+        Console.WriteLine("\n");
+        #endregion
+
+        #region dynamic variable
+
+        Console.WriteLine("dynamic variable");
+
+        dynamic alt = "je suis une string"; // en dynamic on peux changer sont type au runtime pas comme une var qui est changer a la compilation 
+        Console.WriteLine(alt + ", type: " + alt.GetType());
+        alt = 0;
+        Console.WriteLine(alt + ", type: " + alt.GetType());
+        alt = new int[5] { 0, 1, 2, 3, 4 };
+        Console.WriteLine(alt + ", type: " + alt.GetType());
 
         #endregion
 

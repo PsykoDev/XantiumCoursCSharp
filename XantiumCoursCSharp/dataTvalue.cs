@@ -1,5 +1,4 @@
-﻿using System;
-namespace XantiumCoursCSharp
+﻿namespace XantiumCoursCSharp
 {
 	public static class dataTvalue  // class static pour y avoir accès partout 
 	{

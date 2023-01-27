@@ -1,5 +1,4 @@
-﻿using System;
-namespace XantiumCoursCSharp
+﻿namespace XantiumCoursCSharp
 {
     class Ptr
     {

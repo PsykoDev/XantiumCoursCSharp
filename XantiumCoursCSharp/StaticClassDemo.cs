@@ -1,5 +1,4 @@
-﻿
-namespace XantiumCoursCSharp
+﻿namespace XantiumCoursCSharp
 {
 	sealed class StaticClassDemo
 	{
